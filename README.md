@@ -3,6 +3,8 @@
 ## Project Overview:
 This repository contains the codebase for an automated resume evaluation system. The system leverages natural language processing (NLP) techniques, specifically SpaCy, along with topic modeling, to streamline the resume screening process.
 
+![Automated Resume Evaluation](https://user-images.githubusercontent.com/72379583/201525319-7c22e5f9-83f8-4053-94fa-6d279b5447af.png)
+
 ## Introduction
 In today's competitive job market, resume screening poses challenges in terms of time consumption and fairness. This project aims to address these issues by automating the resume evaluation process using NLP, SpaCy, and topic modeling techniques.
 
@@ -60,6 +62,21 @@ The dataset underwent thorough cleaning to ensure its suitability for analysis:
 ## Source Code:
 - GitHub: [Resume_Analysis_Capstone](https://github.com/Jagadeesh-Sunkara/Resume_Analysis_Capstone)
 - Deepnote: [Capstone Resume Analysis](https://deepnote.com/app/capstone-resume-analysis/Resume-Analysis-b8d3f3f0-fa5d-48c0-8f8e-c97ad3726e67)
+
+## Lessons Learned:
+
+1. **Data Acquisition Flexibility:** Adapting to challenges in data acquisition taught us the importance of flexible strategies.
+  
+2. **Thorough Data Cleaning:** Cleaning data effectively is crucial for reliable analysis; we learned various techniques for this purpose.
+
+3. **Insights from EDA:** Exploratory Data Analysis provided valuable insights into dataset distributions and patterns, guiding our modeling approach.
+
+4. **Modeling Challenges:** Overcoming challenges in text preprocessing, entity recognition, and matching algorithms improved our modeling skills.
+
+5. **Effective Feedback Design:** Designing a clear and actionable feedback mechanism based on compatibility scores enhanced user experience.
+
+6. **Integration of SpaCy and LDA:** Integrating SpaCy for entity recognition and LDA for topic modeling enriched our analysis capabilities.
+
 
 ## References:
 1. Deepnote. (n.d.). spaCy Resume Analysis. Retrieved from [https://deepnote.com/app/abid/spaCy-Resume-Analysis-81ba1e4b-7fa8-45fe-ac7a-0b7bf3da7826](https://deepnote.com/app/abid/spaCy-Resume-Analysis-81ba1e4b-7fa8-45fe-ac7a-0b7bf3da7826)
