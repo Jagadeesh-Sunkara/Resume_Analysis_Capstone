@@ -1,72 +1,67 @@
-# Resume_Analysis_Capstone
+# Automated Resume Evaluation with NLP, SpaCy, and Topic Modeling
 
-Introduction:
-Our data science project focuses on the difficulties related to hiring applicants based 
-on resume screening. Our objective is to make the process of selecting candidates easy and 
-quick by implementing technology to automatically evaluate resumes and position 
-requirements. This project is important because it could change how resumes are typically 
-screened. By using technology like machine learning, we hope to make hiring processes 
-simpler, reduce the need for manual work, and make sure everyone has a fair chance of
-getting a job. To achieve this, it is architecture to employ a tool called Spacy to assist in 
-comprehending resumes and experiment with various methods of text analysis as well. 
-Moreover, incorporating a feature that aligns skills with job criteria shows the complexity 
-of this project. Our project involves working with two separate datasets: one containing a 
-resume and the other comprising skills. These datasets will be used to tailor our analysis 
-tool accordingly.
+## Project Overview:
+This repository contains the codebase for an automated resume evaluation system. The system leverages natural language processing (NLP) techniques, specifically SpaCy, along with topic modeling, to streamline the resume screening process.
 
-Hypothesis / Business use:
-Our working idea or rationale for this project is that if we use machine learning to automate 
-the screening and shortlisting of resumes, we can make the candidate selection process 
-quicker and easier. This idea shapes our approach to analyzing and modeling data, to 
-simplify recruitment procedures and enhance the effectiveness of hiring choices.
+## Introduction
+In today's competitive job market, resume screening poses challenges in terms of time consumption and fairness. This project aims to address these issues by automating the resume evaluation process using NLP, SpaCy, and topic modeling techniques.
 
-Dataset:
-For this project, we obtained the dataset from livecareer.com, which includes over 2400 
-resume examples. Each resume is labeled according to the job category it corresponds to, 
-with categories such as HR, Designer, information technology, Teacher, and more.
-The dataset is structured as follows:
-• ID: Unique identifier and file name for each resume in PDF format.
-• Resume_str: The resume text in string format.
-• Resume_html: The resume data in HTML format as scraped from the website.
-• Category: The job category associated with each resume.
-The dataset was gathered by scraping individual resume examples from the livecareer.com 
-website. It was then pre-processed to clean and prepare the data for analysis, including 
-handling missing values and ensuring consistency in the format of the resume texts.
+## Hypothesis / Business Use:
+Our hypothesis is that by employing machine learning to automate the screening and shortlisting of resumes, we can expedite the candidate selection process, making it more efficient and streamlined. This hypothesis guides our data analysis and modeling approach, aimed at simplifying recruitment procedures and improving the quality of hiring decisions.
 
-Data Exploration:
-During the data exploration phase, we will thoroughly analyze the resume dataset obtained 
-from livecareer.com. Key findings will include:
-1. Job Category Distribution: The dataset will cover various job categories such 
-as HR, Designer, information technology, Teacher, and more. Resumes will be 
-unevenly distributed across these categories.
-2. Resume Length Variation: Resumes will exhibit variation in length across 
-different job categories, indicating varying levels of detail and emphasis on 
-qualifications.
-3. Common Keywords Identification: We will identify common keywords and 
-phrases, shedding light on prevalent skills and qualifications emphasized by 
-candidates in different fields.
-4. Visualization: We will utilize visualizations like histograms, word clouds, and 
-scatter plots to illustrate the distribution of job categories and common 
-keywords, as well as to visualize relationships between resume length and job 
-categories.
-Overall, our data exploration will provide insights into the characteristics and patterns 
-present in the resume dataset, guiding subsequent modelling and analysis tasks.
+## Approach:
+Our approach to automated resume evaluation involves a systematic process aimed at streamlining the screening and shortlisting of resumes. We began by acquiring a dataset of over 2400 resume examples, each labeled with its corresponding job category. After cleaning the data to ensure its suitability for analysis, we conducted Exploratory Data Analysis (EDA) to uncover patterns and insights. Next, we built a model that compares job descriptions with uploaded resumes, utilizing natural language processing (NLP) techniques and SpaCy for entity recognition. Additionally, we employed topic modeling, specifically Latent Dirichlet Allocation (LDA), to identify hidden themes within the dataset. Through this approach, we aim to simplify recruitment procedures, enhance the efficiency of hiring decisions, and ultimately revolutionize the resume screening process.
 
-Modelling / Optimization:
-For our modelling phase, we will be utilizing the spaCy library, which offers powerful 
-natural language processing tools. We will fine-tune the spaCy model parameters and 
-configurations to ensure accurate classification of resumes into job categories. 
-Additionally, we may explore customizing the model by incorporating domain-specific 
-data or creating custom entity recognition patterns. We aim to optimize the spaCy model's 
-performance to achieve precise and efficient classification results.
+## Dependencies
+- Python 3.x
+- SpaCy
+- scikit-learn
+- pandas
+- numpy
 
-Conclusion:
-In this project, we will employ an entity ruler to generate extra entities and customize their 
-presentation with unique colors. Moreover, we will display the distributions of categories 
-and skills, allowing users to directly upload resumes with a skill match percentage feature. 
-Additionally, we will utilize LDA for topic modeling and pyLDAvis to visualize the 
-resultant topics. This project provides an invaluable learning experience for me to explore 
-the capabilities of spaCy. Through this project, we expect to uncover various methods to 
-enhance the hiring process by efficiently identifying the most suitable candidates for job 
-positions. Overall, we are eager to apply these techniques to streamline the recruitment 
-process and enhance candidate selection efficiency
+## Data Source:
+The dataset used in this project was obtained from Kaggle, available at [this link](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset). It comprises over 2400 resume examples, each labeled with its corresponding job category. While initially planned to be scraped from the LiveCareer website, we encountered challenges due to dynamic content and changes in website structure. Therefore, we opted to utilize pre-existing scraped data instead. This dataset underwent thorough cleaning to ensure its suitability for analysis and modeling. Through this dataset, we aim to automate the resume evaluation process, streamline recruitment procedures, and improve the quality of hiring decisions.
+
+## Data Cleaning:
+The dataset underwent thorough cleaning to ensure its suitability for analysis:
+- Unused columns like ID and Resume_html were dropped.
+- Text data was preprocessed to remove symbols, punctuation, numbers, and irrelevant words.
+- Commonly occurring but irrelevant words like 'city' and 'company' were removed to enhance model accuracy.
+
+## Features:
+- Automated Resume Evaluation: The system automates the process of screening resumes by matching them with job descriptions.
+- NLP and SpaCy: Utilizes NLP techniques and the SpaCy library for text analysis and entity recognition.
+- Topic Modeling: Implements Latent Dirichlet Allocation (LDA) for identifying common themes and skills within resumes.
+- Feedback Mechanism: Provides feedback to users based on the compatibility between the resume and the job description.
+
+## Key Implementations:
+- Automated Resume Evaluation System: Developed a system using NLP techniques and SpaCy for automated resume screening and shortlisting.
+- Data Preprocessing: Conducted thorough data cleaning to remove noise and irrelevant information from the dataset.
+- Exploratory Data Analysis (EDA): Analyzed job category distributions and identified common keywords to inform model development.
+- Model Building: Built a model to compare job descriptions with uploaded resumes, utilizing vectorization and keyword matching techniques.
+- SpaCy Modeling: Constructed a Resume Analyzer using SpaCy for entity recognition and skill matching.
+- Topic Modeling (LDA): Employed Latent Dirichlet Allocation (LDA) for identifying hidden themes within the resume dataset.
+
+## Exploratory Data Analysis (EDA):
+1. **Job Category Distribution**: Analyzed resume distribution across job sectors to understand diversity.
+2. **Common Keywords Identification**: Identified prevalent skills and qualifications across resumes.
+3. **Visualization Techniques**: Used histograms, pie charts, and word clouds to visualize data distribution and keyword prevalence, guiding analysis.
+
+## Model Building and Results:
+1. **Model Development**: Constructed a model to compare job descriptions with uploaded resumes, leveraging natural language processing (NLP) techniques and SpaCy for text analysis.
+2. **SpaCy Modeling**: Integrated SpaCy for entity recognition and skill matching within resumes, enhancing the accuracy of the evaluation process.
+3. **Keyword Matching**: Implemented a mechanism to calculate a compatibility score between job descriptions and resumes based on the presence of common keywords.
+4. **Result Interpretation**: Provided feedback to users based on the compatibility score:
+   - Low Compatibility: Indicated the need to update the resume with a sad emoji.
+   - Moderate Compatibility: Notified users of a good fit with a neutral emoji.
+   - High Compatibility: Recognized strong candidacy with a happy emoji.
+5. **Impact**: The automated system streamlined the resume evaluation process, making it more efficient and fair, thus enhancing recruitment procedures and improving the quality of hiring decisions.
+
+## Source Code:
+- GitHub: [Resume_Analysis_Capstone](https://github.com/Jagadeesh-Sunkara/Resume_Analysis_Capstone)
+- Deepnote: [Capstone Resume Analysis](https://deepnote.com/app/capstone-resume-analysis/Resume-Analysis-b8d3f3f0-fa5d-48c0-8f8e-c97ad3726e67)
+
+## References:
+1. Deepnote. (n.d.). spaCy Resume Analysis. Retrieved from [https://deepnote.com/app/abid/spaCy-Resume-Analysis-81ba1e4b-7fa8-45fe-ac7a-0b7bf3da7826](https://deepnote.com/app/abid/spaCy-Resume-Analysis-81ba1e4b-7fa8-45fe-ac7a-0b7bf3da7826)
+2. Dutta, G. (n.d.). Resume screening using machine learning
+
